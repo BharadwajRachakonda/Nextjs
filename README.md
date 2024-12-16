@@ -41,3 +41,5 @@ export default function Page() {
 ```
 
 ## Optimal images
+
+pnpm i @vercel/postgres
