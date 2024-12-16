@@ -6,10 +6,11 @@ import { useSearchParams, useRouter, usePathname } from "next/navigation";
 export default function Search({ placeholder }: { placeholder: string }) {
   const searchParams = useSearchParams();
 
+  const pathname = usePathname();
+  const { replace } = useRouter();
+
   function handleSearch(term: string) {
     const params = new URLSearchParams(searchParams);
-    const pathname = usePathname();
-    const { replace } = useRouter();
     if (term) {
       params.set("query", term);
     } else {
